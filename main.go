@@ -60,3 +60,7 @@ func hashHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // create server
+func main() {
+	http.HandleFunc("/hash", hashHandler)
+	http.ListenAndServe(":3000", nil)
+}
