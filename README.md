@@ -22,7 +22,7 @@ Example Call (Python)
 
   response = requests.post(url, json=payload)
   print(response.json())
-
+```
 ## How to RECEIEVE Data
 The service will respond with JSON containing: 
 {"hash": "computed_hash"}
@@ -38,7 +38,7 @@ Example Call (Python)
     print("Hash computed:", data["hash"]
   else:
     print("Error:", response.text)
-
+```
 
 
 Notes: You may see the test.py file for a full example of what sending and receiving data would look like if implementing to a python program. 
