@@ -36,7 +36,7 @@ Example Call (Python)
 
   if response.ok:
     data = response.json()
-    print("Hash computed:", data["hash"]
+    print("Hash computed:", data["hash"])
   else:
     print("Error:", response.text)
 ```
