@@ -14,7 +14,7 @@ def hashing_service():
         assert response.status_code == 200, f"Status code not 200: {response.status_code}"  # test assertion for 200 
         result = response.json() 
         assert "hash" in result, f"No hash returned in response: {result}"                  # return boolean if hash exists in result 
-        print(f"Input: {case['string']}, Algorithm: {case['string']}, Hash: {result['hash']}")
+        print(f"Input: {case['input']}, Algorithm: {case.get('hash', 'sha256')}, Hash: {result['hash']}")
 
 if __name__ == "__main__":
-    hashing_service
+    hashing_service()
