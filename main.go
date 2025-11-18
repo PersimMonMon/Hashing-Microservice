@@ -50,6 +50,11 @@ func hashHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// set default to use sha256
+	if req.Hash == "" {
+		req.Hash = "sha256"
+	}
+
 	// compute hash
 	result := computeHash(req.Input, req.Hash)
 
