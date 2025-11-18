@@ -5,10 +5,10 @@ A HTTP microservice written in Go that computes SHA-1 or SHA-256 hash from JSON 
 Enter in terminal go run main.go and it'll start a server on http://localhost:3000/hash 
 
 ## How to REQUEST Data 
-|Field  |  Type    |  Required  |  Description--------------------------------------|
+|Field  |  Type    |  Required  |  Description                                      |
 |-------|----------|------------|---------------------------------------------------|
-|input  |  string  |  Yes       |  The string you want to hash----------------------|
-|hash   |  string  |  No        |  Takes in "sha1" or "sha256" (defaults to sha256)-| 
+|input  |  string  |  Yes       |  The string you want to hash                      |
+|hash   |  string  |  No        |  Takes in "sha1" or "sha256" (defaults to sha256) | 
 
 Example Call (Python) 
   import requests
