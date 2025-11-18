@@ -11,6 +11,7 @@ Enter in terminal go run main.go and it'll start a server on http://localhost:30
 |hash   |  string  |  No        |  Takes in "sha1" or "sha256" (defaults to sha256) | 
 
 Example Call (Python) 
+```python
   import requests
   url = "http://localhost:3000/hash"
 
@@ -27,6 +28,7 @@ The service will respond with JSON containing:
 {"hash": "computed_hash"}
 
 Example Call (Python)
+```python
   import requests
   url = "http://localhost:3000/hash"
   response = requests.post(url, json={"input": "hello world"})
