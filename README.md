@@ -40,5 +40,8 @@ Example Call (Python)
     print("Error:", response.text)
 ```
 
+## UML Sequence Diagram
+<img width="671" height="466" alt="image" src="https://github.com/user-attachments/assets/eddc9e08-46ff-4451-a1df-656afb69efda" />
+
 
 Notes: You may see the test.py file for a full example of what sending and receiving data would look like if implementing to a python program. 
