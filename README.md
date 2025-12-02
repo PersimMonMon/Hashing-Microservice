@@ -24,6 +24,15 @@ Example Call (Python)
   response = requests.post(url, json=payload)
   print(response.json())
 ```
+
+What this does 
+  -Sends a POST request with the input "hello world"
+  -Request the hash to be computed using SHA-1
+  -Receives back a JSON object containing the computed hash 
+  -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required. 
+
+Notes/Reminders: The program will default to SHA256 if users do not specify an input for "hash". 
+
 ## How to RECEIEVE Data
 The service will respond with JSON containing: 
 {"hash": "computed_hash"}
@@ -40,6 +49,13 @@ Example Call (Python)
   else:
     print("Error:", response.text)
 ```
+
+What this does
+  -Sends "hello world" with no hash algorithm specified
+  -The service automatically uses SHA-256
+  -If successful, it prints the computed hash
+  -If an error occurs, it prints the server's error message.
+  -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required. 
 
 ## UML Sequence Diagram
 <img width="671" height="466" alt="image" src="https://github.com/user-attachments/assets/eddc9e08-46ff-4451-a1df-656afb69efda" />
