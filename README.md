@@ -25,13 +25,13 @@ Example Call (Python)
   print(response.json())
 ```
 
-What this does 
+What this does      
   -Sends a POST request with the input "hello world"  
   -Request the hash to be computed using SHA-1  
   -Receives back a JSON object containing the computed hash   
   -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required. 
 
-How it is being used      
+How it is being used          
   -This expample shows basic usage of the microservice, the client determines which hashing algorithm to use   
   -Useful when the user needs a specific hash type (for example, SHA-1 for legacy systems)    
   -Demostrates how to structure a valid JSON request for the /hash endpoint   
@@ -56,14 +56,14 @@ Example Call (Python)
     print("Error:", response.text)
 ```
 
-What this does
+What this does     
   -Sends "hello world" with no hash algorithm specified  
   -The service automatically uses SHA-256  
   -If successful, it prints the computed hash  
   -If an error occurs, it prints the server's error message.   
   -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required.   
 
-How it is being used       
+How it is being used          
   -This example illustrates default behavior of the microservice when "hash" is not provided.     
   -Useful when the user doesn't care which algorithm is used or prefers the more secure SHA-256    
   -Shows developers how to safely check for successful responses (response.ok)    
