@@ -31,6 +31,12 @@ What this does
   -Receives back a JSON object containing the computed hash   
   -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required. 
 
+How it is being used      
+  -This expample shows basic usage of the microservice, the client determines which hashing algorithm to use   
+  -Useful when the user needs a specific hash type (for example, SHA-1 for legacy systems)    
+  -Demostrates how to structure a valid JSON request for the /hash endpoint   
+  -Helps developers understand how to override the default hashing behavior by giving the "hash" input field   
+
 Notes/Reminders: The program will default to SHA256 if users do not specify an input for "hash". 
 
 ## How to RECEIEVE Data
@@ -56,6 +62,12 @@ What this does
   -If successful, it prints the computed hash  
   -If an error occurs, it prints the server's error message.   
   -Takes in the fields "input" and "hash". Where "input" is a string that's required and "hash" is a string not required.   
+
+How it is being used       
+  -This example illustrates default behavior of the microservice when "hash" is not provided.     
+  -Useful when the user doesn't care which algorithm is used or prefers the more secure SHA-256    
+  -Shows developers how to safely check for successful responses (response.ok)    
+  -Helps users understance how to integrate this service into applications where SHA-256 is the standard    
 
 ## UML Sequence Diagram
 <img width="671" height="466" alt="image" src="https://github.com/user-attachments/assets/eddc9e08-46ff-4451-a1df-656afb69efda" />
